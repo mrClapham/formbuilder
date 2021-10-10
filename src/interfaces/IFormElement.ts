@@ -10,7 +10,7 @@ export enum EFormType {
 export interface IForm {
     currentId: number;
     getNextId: () => number,
-    onSubmit: (e: IFormElement[]) => boolean,
+    onSubmit: (e: HTMLFormElement | null) => boolean,
     elements: IFormElement[]
     addElement: (e: IFormElementBase) => IFormElement[],
     removeElement: (id: number) => IFormElement[]

@@ -1,6 +1,6 @@
 import { IForm, IFormElement, IFormElementBase } from '../interfaces/IFormElement';
 
-const defaltSubmissionFunction = (e: IFormElement[]) => false
+const defaltSubmissionFunction = (e: HTMLFormElement | null) => false
 
 export const findValueInObjectArray = (arr: Partial<IFormElement>[], key: string, value: any): { result: Partial<IFormElement>, index: number } => {
     const result: Partial<IFormElement> = arr.find((e, index) => e[key as keyof typeof e] === value) as Partial<IFormElement>
@@ -30,7 +30,7 @@ const defaultForm: IForm = {
 }
 
 export const formBuilder = {
-    create(elements: IFormElement[] = [], onSubmit: (e: IFormElement[]) => boolean = defaltSubmissionFunction): IForm {
+    create(elements: IFormElement[] = [], onSubmit: (e: HTMLFormElement | null) => boolean = defaltSubmissionFunction): IForm {
         return { ...defaultForm, onSubmit, elements }
     }
 }
