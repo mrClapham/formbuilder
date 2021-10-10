@@ -1,6 +1,6 @@
 .formCreatorFormCell{
     display: block;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 1);
     text-align: left;
     padding: 0.5em;
 }
@@ -9,24 +9,48 @@
     display: flex;
     width: 100%;
     min-height: 800px;
-    background-color: brown;
 }
 
 .formCreatorFormContainerColumn{
     text-align: left;
     width: 50%;
     padding: 2em;
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(233, 229, 229);
 }
+.labelPafdding{
+    min-width: 100px;
+    display: inline-block;
+}
+.formSubmit{
+    width: 100%;
+    background-color: rgb(165, 164, 164);
+    font-size: 0.75em;
+    padding: 1em;
+}
+.deleteButton{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: crimson;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    padding: 6px;
+}
+.icon{
+    width: 100px;
+}
+
 label{
     display: block;
 }
 input{
     padding: 0.5em;
-    margin: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0;
 }
 button{
-    min-width: 150px;
+    width: 90px;
     padding: 0.5em;
-    margin: 0.5em;  
+    margin: 0.5em 0.5em 0.5em 0;  
 }
