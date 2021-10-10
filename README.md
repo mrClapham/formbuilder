@@ -1,4 +1,30 @@
+# Form builder
+
+I built the app on top of Create React App. It has Redux included but I didn't use it in the end as local state management was fine for this breif. 
+
+I went for TypeScript - it would have been faster without but I'm fond of a bit of TypeScript and I'm trying to use it as my default language.
+
+## Approach
+I dived into the business logic first creating a factory function 'src/business-logic/form-builder.ts' which handles adding and removing of form fields etc. It has decent test coverage - I used a TDD approach to ensure all worked as required.
+
+I made it work first and added the aesthetis later. This is far from the prettiest app I have ever created but time was tight.
+
+It's on Heroku [https://berry-investments.herokuapp.com/](https://berry-investments.herokuapp.com/) and GitHub [https://github.com/mrClapham/formbuilder](https://github.com/mrClapham/formbuilder)
+
+## Things I would have done given more time
+- ensure the names of the fields were unique
+- clear the text fields on focus
+- check all fields filled before submitting
+
+
+---
+
+Below is the standard Create React App ReadMe copy 
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
 
 ## Available Scripts
 

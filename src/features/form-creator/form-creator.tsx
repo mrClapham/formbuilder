@@ -61,7 +61,6 @@ export const FormCreator = () => {
     }
 
     const removeElement = (id: number) => {
-        console.log(id)
         form.removeElement(id);
         setFormState({ ...form })
     }
@@ -136,9 +135,6 @@ const onCellPropsChanged = (e: React.ChangeEvent<HTMLInputElement>): void =>{
             <input name='placeholder' type='text' value={cellState.placeholder} onChange={(e)=> onCellPropsChanged(e)}/>
             </label>
 
-            {/* <label htmlFor='label'>Type:
-            <input name='placeholder' type='text' value={cellState.type} onChange={(e)=> onCellPropsChanged(e)}/>
-            </label> */}
         <label>
         <span className={styles.labelPafdding}>Add field</span>
             <button onClick={() => addTextField()}><span className={styles.icon}> {textIcon}</span> Add a text field</button>
@@ -153,7 +149,6 @@ const onCellPropsChanged = (e: React.ChangeEvent<HTMLInputElement>): void =>{
                     form.onSubmit(document.querySelector('#mainForm') as HTMLFormElement)
                 }}>Submit</button>
             </form>
-
 
             <div className={styles.formSubmit} ><code>Submitted value: {JSON.stringify(formOutput)}</code></div>
             {/* <button type='submit'>text</button> */}
